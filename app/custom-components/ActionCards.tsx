@@ -19,7 +19,7 @@ const ActionCards = () => {
                 <FaRegClipboard size={32} className="fill-black" />
               </div>
               <h3 className="text-2xl font-bold">Post a Task</h3>
-              <p className="text-gray-600 text-[24px] leading-relaxed">
+              <p className="text-gray-600 md:text-[24px] leading-relaxed">
                 Get help from vetted locals in minutes — it's quick, safe &
                 reliable. From home cleaning to furniture assembly, find the
                 perfect pro for any job.
@@ -47,7 +47,7 @@ const ActionCards = () => {
                 />{" "}
               </div>
               <h3 className="text-2xl font-bold">Become a Gigsta Pro</h3>
-              <p className="text-gray-600 text-[24px] leading-relaxed">
+              <p className="text-gray-600 md:text-[24px] leading-relaxed">
                 Got skills? Get matched with real jobs and earn on your own
                 terms. Set your own rates, choose your schedule, and build your
                 client base in Uyo.

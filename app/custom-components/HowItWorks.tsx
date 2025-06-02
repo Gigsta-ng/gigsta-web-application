@@ -8,13 +8,13 @@ import { FaRegClipboard } from "react-icons/fa6";
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
+    <section id="how-it-works" className="lg:py-24 py-32">
       <Wrapper className="flex-col items-center">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             How <span className="text-yellow-500">Gigsta</span> Works
           </h2>
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-300 md:text-xl max-w-3xl mx-auto leading-relaxed">
             Getting things done has never been easier. Just follow these simple
             steps to get started with skilled professionals.
           </p>
