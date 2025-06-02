@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./custom-components/Navbar";
-import Wrapper from "./custom-components/Wrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,12 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} bg-accent-bg text-white min-h-screen w-full antialiased`}
+        className={`${poppins.className} bg-accent-bg text-white min-h-screen w-full overflow-x-hidden antialiased`}
       >
-        <Wrapper className="flex-col gap-6">
-          <Navbar />
-          {children}
-        </Wrapper>
+        <Navbar />
+        {children}
       </body>
     </html>
   );

@@ -2,18 +2,19 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Wrapper from "./Wrapper";
-import { Briefcase, CheckCircle, User } from "lucide-react";
+import { CheckCircle, User } from "lucide-react";
 import { CButton } from "./CButton";
+import { FaRegClipboard } from "react-icons/fa6";
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
+    <section id="how-it-works" className="lg:py-24 py-32">
       <Wrapper className="flex-col items-center">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             How <span className="text-yellow-500">Gigsta</span> Works
           </h2>
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-300 md:text-xl max-w-3xl mx-auto leading-relaxed">
             Getting things done has never been easier. Just follow these simple
             steps to get started with skilled professionals.
           </p>
@@ -23,7 +24,7 @@ const HowItWorks = () => {
           <Card className="bg-gray-100 py-10 px-4 text-black text-center">
             <CardContent className="p-8 space-y-6">
               <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto">
-                <Briefcase className="h-10 w-10 text-black" />
+                <FaRegClipboard size={32} className="fill-black" />
               </div>
               <h3 className="text-2xl font-bold">Post a Task</h3>
               <p className="text-gray-700 text-lg md:text-[24px] leading-relaxed">

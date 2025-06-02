@@ -2,7 +2,7 @@
 const images = {
     "not-found": "/images/eaten.svg",
     logo: '/images/logo.svg',
-    "hero-image": "/images/hero-image.svg",
+    hero: "/images/hero-image.png",
     cleaner: "/images/cleaner.svg",
     painter: "/images/painter.svg",
     plumber: "/images/plumber.svg",
@@ -13,7 +13,9 @@ const images = {
 const icons = {
     gigsta: "/icons/gigsta.svg",
     insta: "/icons/insta.svg",
-    facebook: "/icons/facebook.svg"
+    facebook: "/icons/facebook.svg",
+    tiktok: "/icons/tiktok.svg",
+    naira: "/icons/naira.svg"
 }
 
 export default {images, icons};
