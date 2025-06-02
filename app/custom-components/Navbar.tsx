@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
   return (
     <Wrapper className="w-full">
-      <div className="flex w-full justify-between items-center sticky top-0 z-50 max-md:bg-white/5 max-md:backdrop-blur-md">
+      <div className="flex w-full justify-between items-center sticky top-0 z-50 rounded-[32px  ] bg-white/5 p-2 px-4 backdrop-blur-md">
         <Logo />
         <div className="flex gap-6 items-center">
           <ul className="flex gap-6 text-[20px] max-sm:hidden">

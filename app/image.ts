@@ -13,7 +13,9 @@ const images = {
 const icons = {
     gigsta: "/icons/gigsta.svg",
     insta: "/icons/insta.svg",
-    facebook: "/icons/facebook.svg"
+    facebook: "/icons/facebook.svg",
+    tiktok: "/icons/tiktok.svg",
+    naira: "/icons/naira.svg"
 }
 
 export default {images, icons};

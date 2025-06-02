@@ -2,8 +2,9 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Wrapper from "./Wrapper";
-import { Briefcase, CheckCircle, User } from "lucide-react";
+import { CheckCircle, User } from "lucide-react";
 import { CButton } from "./CButton";
+import { FaRegClipboard } from "react-icons/fa6";
 
 const HowItWorks = () => {
   return (
@@ -23,7 +24,7 @@ const HowItWorks = () => {
           <Card className="bg-gray-100 py-10 px-4 text-black text-center">
             <CardContent className="p-8 space-y-6">
               <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto">
-                <Briefcase className="h-10 w-10 text-black" />
+                <FaRegClipboard size={32} className="fill-black" />
               </div>
               <h3 className="text-2xl font-bold">Post a Task</h3>
               <p className="text-gray-700 text-lg md:text-[24px] leading-relaxed">

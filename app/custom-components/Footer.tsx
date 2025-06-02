@@ -2,7 +2,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Logo from "./Logo";
 import Link from "next/link";
-import { Facebook, Instagram, Mail, Phone, Twitter } from "lucide-react";
+import assets from "../image";
+import { Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -57,19 +59,34 @@ const Footer = () => {
                   href="#"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <Facebook className="h-6 w-6" />
+                  <Image
+                    src={assets.icons.facebook}
+                    alt="gigsta-facebook"
+                    width={24}
+                    height={24}
+                  />
                 </Link>
                 <Link
                   href="#"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <Twitter className="h-6 w-6" />
+                  <Image
+                    src={assets.icons.insta}
+                    alt="gigsta-insta"
+                    width={24}
+                    height={24}
+                  />
                 </Link>
                 <Link
                   href="#"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <Instagram className="h-6 w-6" />
+                 <Image
+                    src={assets.icons.tiktok}
+                    alt="gigsta-insta"
+                    width={24}
+                    height={24}
+                  />
                 </Link>
               </div>
               <p className="text-gray-400 text-lg md:text-[20px]">Follow Us</p>

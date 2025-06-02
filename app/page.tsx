@@ -5,6 +5,7 @@ import Footer from "./custom-components/Footer";
 import { CButton } from "./custom-components/CButton";
 import HowItWorks from "./custom-components/HowItWorks";
 import ActionCards from "./custom-components/ActionCards";
+import WhatsappBtn from "./custom-components/WhatsappBtn";
 
 export default function GigstaLanding() {
   return (
@@ -14,6 +15,7 @@ export default function GigstaLanding() {
       <HowItWorks />
       <Testimonial />
       <Footer />
+      <WhatsappBtn />
     </div>
   );
 }

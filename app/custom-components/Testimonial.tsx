@@ -4,6 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import Wrapper from "./Wrapper";
 import { Star, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const Testimonial = () => {
   const testionials = [
@@ -35,7 +40,7 @@ const Testimonial = () => {
 
   return (
     <section className="py-16 bg-accent-yellow/90 text-black">
-        <Wrapper className="flex-col items-start">
+      <Wrapper className="flex-col items-start">
         <div className="space-y-6 mb-16 flex gap-8 items-end">
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">
@@ -44,10 +49,7 @@ const Testimonial = () => {
             <div className="flex items-center space-x-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-6 w-6 fill-white"
-                  />
+                  <Star key={i} className="h-6 w-6 fill-white" />
                 ))}
               </div>
               <span className="text-black text-xl">4.9</span>
@@ -57,33 +59,41 @@ const Testimonial = () => {
               community of satisfied customers and skilled professionals.
             </p>
           </div>
-          <Badge
-            className="bg-white text-black px-4 py-2 text-lg"
-          >
+          <Badge className="bg-white text-black px-4 py-2 text-lg">
             <Users className="h-5 w-5 mr-2" />
             20+ Active Pros in Uyo
           </Badge>
         </div>
 
         <div className="grid md:grid-cols-3 gap-[5%]">
-          {testionials.map((testimonial, index) => (
-            <Card key={index} className="bg-white py-16 text-black">
-              <CardContent className="p-8 space-y-6">
-                <p className="text-lg md:text-[20px] leading-relaxed">{testimonial.message}</p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
-                    <span className="text-black text-[24px] font-bold">
-                      {testimonial.icon}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-bold text-lg">{testimonial.name}</p>
-                    <p className="text-gray-600">{testimonial.state}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          <Carousel>
+            <CarouselContent>
+              {testionials.map((testimonial, index) => (
+                <CarouselItem className="basis-1/3">
+                  <Card key={index} className="bg-white py-16 text-black">
+                    <CardContent className="p-8 space-y-6">
+                      <p className="text-lg md:text-[20px] leading-relaxed">
+                        {testimonial.message}
+                      </p>
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                          <span className="text-black text-[24px] font-bold">
+                            {testimonial.icon}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-bold text-lg">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-gray-600">{testimonial.state}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </Wrapper>
     </section>
