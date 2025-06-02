@@ -10,7 +10,7 @@ import Link from "next/link";
 const NotFound = () => {
   const pathName = usePathname();
   return (
-    <div className="w-full mmin-h-max flex items-center justify-center pt-20 flex-col gap-10">
+    <div className="w-full mmin-h-max flex items-center justify-center py-20 flex-col gap-10">
       <Image src={assets.images["not-found"]} alt="" width={400} height={400} />
       <div className="text-[32px]">
         We couldn't find{" "}
