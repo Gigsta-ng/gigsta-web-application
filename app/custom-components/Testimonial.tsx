@@ -81,7 +81,7 @@ const Testimonial = () => {
                   />
                 ))}
               </div>
-              <span className="text-black text-lg md:text-xl">4.9</span>
+              <span className="text-white text-lg md:text-xl">4.9</span>
             </div>
             <p className="text-WHITE md:text-xl max-w-3xl mx-auto leading-relaxed">
               Over 20 tasks completed this week in Uyo. Join our growing
@@ -145,7 +145,7 @@ const Testimonial = () => {
           {/* Mobile navigation dots */}
           <div className="flex justify-center mt-6 md:hidden space-x-2">
             {testimonials.map((_, index) => (
-              <div key={index} className="w-2 h-2 rounded-full bg-gray-300" />
+              <div key={index} className={`w-2 h-2 rounded-full ${index ? "bg-accent-yellow": "bg-gray-300"}`} />
             ))}
           </div>
         </Carousel>
