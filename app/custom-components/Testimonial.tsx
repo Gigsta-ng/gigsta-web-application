@@ -111,7 +111,7 @@ const Testimonial = () => {
                     <div className="space-y-4 md:space-y-6">
                       <div className="flex-1">
                         <p className="text-base md:text-lg leading-relaxed text-gray-700 italic">
-                          "{testimonial.message}"
+                          &quot;{testimonial.message}&quot;
                         </p>
                       </div>
 

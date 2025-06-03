@@ -20,7 +20,7 @@ const ActionCards = () => {
               </div>
               <h3 className="text-2xl font-bold">Post a Task</h3>
               <p className="text-gray-600 md:text-[24px] leading-relaxed">
-                Get help from vetted locals in minutes — it's quick, safe &
+                Get help from vetted locals in minutes — it&apos;s quick, safe &
                 reliable. From home cleaning to furniture assembly, find the
                 perfect pro for any job.
               </p>

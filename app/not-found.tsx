@@ -13,8 +13,8 @@ const NotFound = () => {
     <div className="w-full mmin-h-max flex items-center justify-center py-20 flex-col gap-10">
       <Image src={assets.images["not-found"]} alt="" width={400} height={400} />
       <div className="text-[32px]">
-        We couldn't find{" "}
-        <span className="text-accent-yellow">"{pathName}"</span>
+        We couldn&apos;t find{" "}
+        <span className="text-accent-yellow">&quot;{pathName}&quot;</span>
       </div>
       <p>Seems you serached a wrong page</p>
       <Link href={"/"}>
