@@ -98,7 +98,7 @@ const Testimonial = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full text-black"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
