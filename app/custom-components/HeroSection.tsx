@@ -4,7 +4,6 @@ import { CButton } from "./CButton";
 import Wrapper from "./Wrapper";
 import { ChevronRight } from "lucide-react";
 import heroImg from "../../public/images/hero-image.png"
-import useMediaQuery from "../hookes/useMediaQuery";
 
 const HeroSection = () => {
   const bg = {
