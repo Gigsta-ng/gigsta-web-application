@@ -43,9 +43,9 @@ const Navbar = () => {
 		<Wrapper className="w-full">
 			<div
 				className={`flex w-full justify-between items-center ${
-					// biome-ignore lint/style/noNonNullAssertion: <explanation>
 					screenHeight &&
 					screenHeight >= 60 &&
+					// biome-ignore lint/style/noNonNullAssertion: <explanation>
 					screenWidth! <= 620 &&
 					"fixed left-[5%] transition-all -translate-x-[2.5%] w-[95%]"
 				} z-50 rounded-[32px] max-md:bg-black/10 max-md:p-2 max-md:px-4 max-md:backdrop-blur-lg`}
