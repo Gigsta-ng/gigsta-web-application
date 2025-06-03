@@ -4,10 +4,10 @@ import { CButton } from "./CButton";
 import Wrapper from "./Wrapper";
 import { ChevronRight } from "lucide-react";
 import heroImg from "../../public/images/hero-image.png"
-// import useMediaQuery from "../hookes/useMediaQuery";
+import useMediaQuery from "../hookes/useMediaQuery";
 
 const HeroSection = () => {
-  // const {screenWidth} = useMediaQuery();
+  const {screenWidth, screenHeight} = useMediaQuery();
   const bg = {
     backgroundImage: `url(${heroImg.src})`,
     backgroundPosition: "bottom right",
@@ -16,7 +16,7 @@ const HeroSection = () => {
     backgroundPositionX: "105%"
   };
   return (
-    <section className="py-10 md:py-32" style={bg}>
+    <section className={`pt-[100px] pb-10 md:py-32 `} style={bg}>
       <Wrapper className="flex-col gap-6">
           <div className="space-y-8 max-md:flex flex-col items-center">
             <div className="space-y-2">
