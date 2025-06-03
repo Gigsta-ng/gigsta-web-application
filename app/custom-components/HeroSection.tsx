@@ -7,7 +7,6 @@ import heroImg from "../../public/images/hero-image.png"
 import useMediaQuery from "../hookes/useMediaQuery";
 
 const HeroSection = () => {
-  const {screenWidth, screenHeight} = useMediaQuery();
   const bg = {
     backgroundImage: `url(${heroImg.src})`,
     backgroundPosition: "bottom right",
