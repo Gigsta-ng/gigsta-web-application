@@ -50,10 +50,7 @@ export const ContactUsForm = () => {
 	};
 
 	return (
-		<div className="w-full max-w-2xl mx-auto p-4 md:p-8 bg-white rounded-xl shadow-xl">
-			<h2 className="text-3xl md:text-2xl font-semibold text-center text-black mb-8">
-				Send Us a Message
-			</h2>
+		<div className="w-full max-w-2xl mx-auto px-4 md:px-8">
 			<Form {...form}>
 				<form
 					onSubmit={form.handleSubmit(onSubmit)}
