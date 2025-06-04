@@ -147,10 +147,12 @@ const Testimonial = () => {
 					{/* Mobile navigation dots */}
 					<div className="flex justify-center mt-6 md:hidden space-x-2">
 						{testimonials.map((_, index) => (
-							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<div
+								// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 								key={index}
-								className={`w-2 h-2 rounded-full ${index ? "bg-accent-yellow" : "bg-gray-300"}`}
+								className={`w-2 h-2 rounded-full ${
+									index ? "bg-accent-yellow" : "bg-gray-300"
+								}`}
 							/>
 						))}
 					</div>
