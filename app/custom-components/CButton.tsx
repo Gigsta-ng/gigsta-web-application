@@ -14,7 +14,7 @@ type WithoutIcon = {
 type CButtonProps = PropsWithChildren<{
 	disabled?: boolean;
 	onPress: () => void;
-	type?: "submit" | "";
+	type?: "submit" | "button" | "reset";
 	className?: string;
 	variant: "primary" | "secondary" | "transparent";
 }> &
@@ -28,10 +28,11 @@ export const CButton = ({
 	icon,
 	iconPosition,
 	children,
+	type,
 }: CButtonProps) => {
 	return (
 		<button
-			type="button"
+			type={type ?? "button"}
 			onClick={onPress}
 			disabled={disabled}
 			className={cn(
