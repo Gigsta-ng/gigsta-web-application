@@ -22,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${poppins.className} bg-accent-bg text-white min-h-screen w-full overflow-x-hidden antialiased`}
+				className={`${poppins.className} bg-accent-bg m-0 p-0 text-white min-h-screen w-full overflow-x-hidden antialiased`}
 			>
 				<Navbar />
 				{children}

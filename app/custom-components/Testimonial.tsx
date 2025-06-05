@@ -2,72 +2,47 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
+	type CarouselApi,
 	CarouselContent,
 	CarouselItem,
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { testimonials } from "@/lib/config/testimonials";
+import Autoplay from "embla-carousel-autoplay";
 import { Users } from "lucide-react";
+import { useRef } from "react";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 
 const Testimonial = () => {
-	const testimonials = [
-		{
-			message: `I needed help moving furniture on short notice. Posted on
-                Gigsta and had a pro at my door within 2 hours. Incredible
-                service!`,
-			name: "Abasiama Okon",
-			state: "Uyo, Akwa-Ibom",
-			icon: "AO",
-		},
-		{
-			message: `As a Gigsta Pro, I've been able to use my handyman skills to
-                earn extra income. The platform makes it easy to find clients in
-                my area.`,
-			name: "Emmanuel Effiong",
-			state: "Gigsta Pro",
-			icon: "EE",
-		},
-		{
-			message: `I use Gigsta whenever I need cleaning help. The service is
-                reliable and the professionals are always well-vetted. Highly
-                recommend!`,
-			name: "Nsikak Umoren",
-			state: "Uyo, Akwa-Ibom",
-			icon: "NU",
-		},
-		{
-			message: `I needed help moving furniture on short notice. Posted on
-                Gigsta and had a pro at my door within 2 hours. Incredible
-                service!`,
-			name: "Abasiama Okon",
-			state: "Uyo, Akwa-Ibom",
-			icon: "AO",
-		},
-		{
-			message: `As a Gigsta Pro, I've been able to use my handyman skills to
-                earn extra income. The platform makes it easy to find clients in
-                my area.`,
-			name: "Emmanuel Effiong",
-			state: "Gigsta Pro",
-			icon: "EE",
-		},
-		{
-			message: `I use Gigsta whenever I need cleaning help. The service is
-                reliable and the professionals are always well-vetted. Highly
-                recommend!`,
-			name: "Nsikak Umoren",
-			state: "Uyo, Akwa-Ibom",
-			icon: "NU",
-		},
-	];
+	const [api, setApi] = React.useState<NonNullable<CarouselApi>>();
+	const [current, setCurrent] = React.useState(0);
+	const [count, setCount] = React.useState(0);
 
+	const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+
+	const onInit = React.useCallback((emblaApi: NonNullable<CarouselApi>) => {
+		setCount(emblaApi.scrollSnapList().length);
+	}, []);
+
+	const onSelect = React.useCallback((emblaApi: NonNullable<CarouselApi>) => {
+		setCurrent(emblaApi.selectedScrollSnap());
+	}, []);
+
+	React.useEffect(() => {
+		if (!api) return;
+
+		onInit(api);
+		onSelect(api);
+		api.on("reInit", onInit);
+		api.on("select", onSelect);
+	}, [api, onInit, onSelect]);
 	return (
-		<section className="py-16 bg-white/30 text-white">
+		<section className="py-16 bg-white/10 backdrop-blur-md text-white">
 			<Wrapper className="flex-col items-start w-full">
-				<div className="space-y-6 mb-16 flex gap-8 max-sm:flex-col lg:items-end">
+				<div className="space-y-6 mb-16 flex gap-8 max-lg:flex-col lg:items-end">
 					<div className="space-y-4">
 						<h2 className="text-4xl md:text-5xl font-bold">
 							Trusted by Natives in Uyo
@@ -95,11 +70,15 @@ const Testimonial = () => {
 					</div>
 				</div>
 				<Carousel
+					plugins={[plugin.current]}
 					opts={{
 						align: "start",
 						loop: true,
+						active: true,
 					}}
 					className="w-full text-black"
+					onMouseEnter={plugin.current.stop}
+					onMouseLeave={plugin.current.reset}
 				>
 					<CarouselContent className="-ml-2 md:-ml-4">
 						{testimonials.map((testimonial, index) => (
@@ -140,21 +119,8 @@ const Testimonial = () => {
 					</CarouselContent>
 
 					<div className="hidden md:block">
-						<CarouselPrevious className="left-0 -translate-x-12" />
-						<CarouselNext className="right-0 translate-x-12" />
-					</div>
-
-					{/* Mobile navigation dots */}
-					<div className="flex justify-center mt-6 md:hidden space-x-2">
-						{testimonials.map((_, index) => (
-							<div
-								// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-								key={index}
-								className={`w-2 h-2 rounded-full ${
-									index ? "bg-accent-yellow" : "bg-gray-300"
-								}`}
-							/>
-						))}
+						<CarouselPrevious className="left-0 md:-translate-x-8 lg:-translate-x-12" />
+						<CarouselNext className="right-0 md:translate-x-8 lg:translate-x-12" />
 					</div>
 				</Carousel>
 			</Wrapper>
