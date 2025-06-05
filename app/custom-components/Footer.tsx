@@ -23,19 +23,19 @@ const Footer = () => {
 						<div className="space-y-3">
 							<Link
 								href="#how-it-works"
-								className="block text-gray-300 hover:text-white transition-colors md:text-lg md:text-[20]"
+								className="block text-gray-100 hover:text-white transition-colors md:text-lg md:text-[20]"
 							>
 								How It Works
 							</Link>
 							<Link
 								href="#"
-								className="block text-gray-300 hover:text-white transition-colors md:text-lg md:text-[20]"
+								className="block text-gray-100 hover:text-white transition-colors md:text-lg md:text-[20]"
 							>
 								Become a Gigsta pro
 							</Link>
 							<Link
 								href="#"
-								className="block text-gray-300 hover:text-white transition-colors md:text-lg md:text-[20]"
+								className="block text-gray-100 hover:text-white transition-colors md:text-lg md:text-[20]"
 							>
 								Post a Task
 							</Link>
@@ -59,7 +59,7 @@ const Footer = () => {
 							<div className="flex space-x-4 pt-2">
 								<Link
 									href="#"
-									className="text-gray-300 hover:text-white transition-colors"
+									className="text-gray-100 hover:text-white transition-colors"
 								>
 									<Image
 										src={assets.icons.facebook}
@@ -70,7 +70,7 @@ const Footer = () => {
 								</Link>
 								<Link
 									href="#"
-									className="text-gray-300 hover:text-white transition-colors"
+									className="text-gray-100 hover:text-white transition-colors"
 								>
 									<Image
 										src={assets.icons.insta}
@@ -81,7 +81,7 @@ const Footer = () => {
 								</Link>
 								<Link
 									href="#"
-									className="text-gray-300 hover:text-white transition-colors"
+									className="text-gray-100 hover:text-white transition-colors"
 								>
 									<Image
 										src={assets.icons.tiktok}

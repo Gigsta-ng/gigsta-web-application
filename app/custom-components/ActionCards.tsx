@@ -13,7 +13,7 @@ const ActionCards = () => {
 		<section className="bg-white/10 md:py-10 md:-translate-y-20 backdrop:blur-md">
 			<Wrapper>
 				<div className="grid md:grid-cols-2 gap-[5%]">
-					<Card className="bg-white text-black py-16">
+					<Card className="bg-white text-black py-8 md:py-16">
 						<CardContent className="px-10 space-y-6">
 							<div className="w-14 h-14 bg-yellow-500 rounded-xl flex items-center justify-center">
 								<FaRegClipboard size={32} className="fill-black" />
@@ -36,7 +36,7 @@ const ActionCards = () => {
 						</CardContent>
 					</Card>
 
-					<Card className="bg-white text-black py-16">
+					<Card className="bg-white text-black py-8 md:py-16">
 						<CardContent className="px-10 space-y-6">
 							<div className="w-14 h-14 bg-yellow-500 rounded-xl flex items-center justify-center">
 								<Image

@@ -25,13 +25,13 @@ const HeroSection = () => {
 			<Wrapper className="flex-col gap-6">
 				<div className="space-y-8 max-md:flex flex-col items-center">
 					<div className="space-y-2">
-						<h1 className="text-4xl md:text-5xl lg:text-6xl max-md:text-center font-bold leading-tight text-white">
+						<h1 className="text-4xl md:text-5xl lg:text-7xl max-md:text-center font-bold leading-tight text-white">
 							Need help? Got skills?
 						</h1>
-						<h2 className="text-3xl md:text-5xl lg:text-6xl max-md:text-center font-bold text-yellow-500 leading-tight">
+						<h2 className="text-3xl md:text-5xl lg:text-7xl max-md:text-center font-bold text-yellow-500 leading-tight">
 							Gigsta gets you
 						</h2>
-						<h2 className="text-3xl md:text-5xl lg:text-6xl max-md:text-center font-bold text-yellow-500 leading-tight">
+						<h2 className="text-3xl md:text-5xl lg:text-7xl max-md:text-center font-bold text-yellow-500 leading-tight">
 							Connected
 						</h2>
 					</div>
