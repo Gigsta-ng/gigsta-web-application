@@ -30,7 +30,7 @@ const Navbar = () => {
 		},
 		{
 			label: "Service",
-			href: "/service",
+			href: "/services",
 			icon: <VscTools size={24} />,
 		},
 		{
@@ -47,12 +47,12 @@ const Navbar = () => {
 					screenHeight >= 60 &&
 					// biome-ignore lint/style/noNonNullAssertion: <explanation>
 					screenWidth! <= 620 &&
-					"fixed left-[5%] transition-all -translate-x-[2.5%] w-[95%]"
+					"fixed left-[5%] transition-all -translate-x-[5%] w-[95%]"
 				} z-50 rounded-[32px] max-md:bg-black/10 max-md:p-2 max-md:px-4 max-md:backdrop-blur-lg`}
 			>
 				<Logo />
 				<div className="flex gap-6 items-center">
-					<ul className="flex gap-6 text-[20px] max-sm:hidden">
+					<ul className="flex md:gap-10 lg:gap-12 text-[20px] max-lg:hidden">
 						{navList.map((navItem) => (
 							<Link
 								className={`${
@@ -70,17 +70,17 @@ const Navbar = () => {
 						onPress={() => {}}
 						variant="primary"
 					>
-						Become a pro
+						Become a Gigsta pro
 					</CButton>
 					<Drawer>
-						<DrawerTrigger className="md:hidden">
+						<DrawerTrigger className="lg:hidden">
 							<RiMenuFoldLine size={32} />
 						</DrawerTrigger>
-						<DrawerContent className="md:hidden">
+						<DrawerContent className="lg:hidden">
 							<DrawerTitle className="hidden">
 								Are you absolutely sure?
 							</DrawerTitle>
-							<section className="flex justify-between px-8 py-4 gap-4">
+							<section className="flex justify-between md:justify-center md:gap-20 px-8 py-4 gap-4">
 								{navList.map((navItem) => (
 									<DrawerClose key={navItem.label}>
 										<Link

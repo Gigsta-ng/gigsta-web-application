@@ -36,7 +36,6 @@ export const CButton = ({
 			onClick={onPress}
 			disabled={disabled}
 			className={cn(
-				className,
 				{
 					"bg-accent-yellow text-accent-bg hover:bg-accent-yellow/90":
 						variant === "primary",
@@ -45,9 +44,10 @@ export const CButton = ({
 					"bg-white text-black border-[1px] border-accent-yellow":
 						variant === "secondary",
 				},
-				`relative overflow-hidden text-[14px] md:text-[18px] flex items-center font-bold hover:scale-105 w-max h-max py-4 px-8 rounded-lg transition active:animate-bounce outline-none cursor-pointer border-none ${
+				`relative overflow-hidden text-[14px] md:text-[18px] flex items-center font-bold hover:scale-105 w-max h-max py-4 px-8 rounded-lg transition active:animate-bounce outline-none cursor-pointer ${
 					icon && "justify-between gap-8"
 				}`,
+				className,
 			)}
 		>
 			{variant === "primary" && (

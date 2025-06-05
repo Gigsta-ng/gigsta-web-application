@@ -2,19 +2,26 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
 import heroImg from "../../public/images/hero-image.png";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { CButton } from "./CButton";
 import Wrapper from "./Wrapper";
 
 const HeroSection = () => {
+	const { screenWidth } = useMediaQuery();
+	const isMobile = screenWidth && screenWidth < 1024;
+
 	const bg = {
-		backgroundImage: `url(${heroImg.src})`,
+		backgroundImage: isMobile
+			? `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImg.src})`
+			: `url(${heroImg.src})`,
 		backgroundPosition: "bottom right",
-		backgroundSize: "contain",
+		backgroundSize: isMobile ? "contain" : "47.9%",
 		backgroundRepeat: "no-repeat",
-		backgroundPositionX: "105%",
+		backgroundPositionX: "95%",
 	};
+
 	return (
-		<section className={"pt-[100px] pb-10 md:py-32 "} style={bg}>
+		<section className="pt-[100px] pb-10 md:py-20" style={bg}>
 			<Wrapper className="flex-col gap-6">
 				<div className="space-y-8 max-md:flex flex-col items-center">
 					<div className="space-y-2">
@@ -22,7 +29,10 @@ const HeroSection = () => {
 							Need help? Got skills?
 						</h1>
 						<h2 className="text-3xl md:text-5xl lg:text-6xl max-md:text-center font-bold text-yellow-500 leading-tight">
-							Gigsta gets you connected
+							Gigsta gets you
+						</h2>
+						<h2 className="text-3xl md:text-5xl lg:text-6xl max-md:text-center font-bold text-yellow-500 leading-tight">
+							Connected
 						</h2>
 					</div>
 
@@ -38,11 +48,16 @@ const HeroSection = () => {
 							variant="secondary"
 							icon={<ChevronRight />}
 							iconPosition="right"
+							className="border-[2px] border-accent-yellow"
 						>
 							Post a Task
 						</CButton>
-						<CButton onPress={() => {}} variant="primary">
-							Become a pro
+						<CButton
+							onPress={() => {}}
+							variant="primary"
+							className="border-none"
+						>
+							Become a Gigsta pro
 						</CButton>
 					</div>
 				</div>
