@@ -12,21 +12,21 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
 	return (
-		<div className="min-h-screen bg-black text-white">
+		<div className="min-h-screen bg-black text-white pt-[70px] md:pt-0 pb-10 md:py-20">
 			<Wrapper className="flex-col">
 				<Heading heading="Contact Us" />
-				<div className="bg-[#F5F5F5] text-black rounded-lg p-8">
+				<div className="bg-[#F5F5F5] text-black rounded-lg p-4 md:p-8">
 					<div className="flex items-center mb-8">
-						<div className="w-3 h-3 rounded-full bg-yellow-400 mr-3" />
-						<p className="text-lg font-semibold">
+						<div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400 mr-3" />
+						<p className="text-base md:text-lg font-semibold">
 							{"Questions, feedback, or bookings? We’re listening!"}
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 lg:py-8">
-						<div className="space-y-14">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 py-4 lg:py-8">
+						<div className="space-y-10 md:space-y-14">
 							<div className="flex items-center">
-								<div className="w-8 h-8 flex items-center justify-center">
+								<div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
 									<Image
 										src="/icons/phone.svg"
 										alt="phone icon"
@@ -35,14 +35,14 @@ export default function ContactPage() {
 										className="object-contain"
 									/>
 								</div>
-								<div className="ml-4 text-xl">
+								<div className="ml-4 text-sm md:text-xl">
 									<h3 className="font-bold">Phone</h3>
 									<p>07044413998</p>
 								</div>
 							</div>
 
 							<div className="flex items-center">
-								<div className="w-8 h-8 flex items-center justify-center">
+								<div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
 									<Image
 										src="/icons/whatsapp.svg"
 										alt="phone icon"
@@ -51,14 +51,14 @@ export default function ContactPage() {
 										className="object-contain"
 									/>
 								</div>
-								<div className="ml-4 text-xl">
+								<div className="ml-4 text-sm md:text-xl">
 									<h3 className="font-bold">WhatsApp</h3>
 									<p>+2347044413998</p>
 								</div>
 							</div>
 
 							<div className="flex items-center">
-								<div className="w-8 h-8 flex items-center justify-center">
+								<div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
 									<Image
 										src="/icons/email.svg"
 										alt="phone icon"
@@ -67,14 +67,14 @@ export default function ContactPage() {
 										className="object-contain"
 									/>
 								</div>
-								<div className="ml-4 text-xl">
+								<div className="ml-4 text-sm md:text-xl">
 									<h3 className="font-bold">Email</h3>
 									<p>gigsta.gig@gmail.com</p>
 								</div>
 							</div>
 
 							<div className="flex items-center">
-								<div className="w-8 h-8 flex items-center justify-center">
+								<div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
 									<Image
 										src="/icons/location.svg"
 										alt="phone icon"
@@ -83,7 +83,7 @@ export default function ContactPage() {
 										className="object-contain"
 									/>
 								</div>
-								<div className="ml-4 text-xl">
+								<div className="ml-4 text-sm md:text-xl">
 									<h3 className="font-bold">Location</h3>
 									<p>Uyo</p>
 								</div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
 						{/* Contact Form */}
 						<div>
-							<h3 className="text-xl font-bold mb-4 text-center">
+							<h3 className="text-base md:text-xl font-bold mb-4 text-center">
 								Send Us a Message
 							</h3>
 							<ContactUsForm />
