@@ -50,7 +50,7 @@ export const ContactUsForm = () => {
 	};
 
 	return (
-		<div className="w-full max-w-2xl mx-auto px-4 md:px-8">
+		<div className="w-full max-w-2xl mx-auto md:px-8">
 			<Form {...form}>
 				<form
 					onSubmit={form.handleSubmit(onSubmit)}
@@ -97,7 +97,7 @@ export const ContactUsForm = () => {
 							iconPosition="left"
 							disabled={formState.isSubmitting}
 							onPress={() => {}}
-							className="w-full sm:w-auto"
+							className="w-auto"
 						>
 							{formState.isSubmitting ? "Sending..." : "Send Message"}
 						</CButton>
